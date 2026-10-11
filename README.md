@@ -59,7 +59,13 @@ sub Agents
    what ever B provides still as tool call result to Agent A, Agent A will have to decide how to use the result from Agent B and how to integrate it into its own workflow.
    
    When to use :
-    
+    multi-step that clutter main agents context
+    specialized domains that need custom instructions and tools
+
+    When  not to:
+        simple , single step tasks
+        when you need to maintain intermediate context 
+
 
 
 
