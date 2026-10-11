@@ -21,6 +21,34 @@ Specialized Knowledge?: Parametric or non-parametric that can serve to LLM and m
 
 Core Principle (MSA): Context Engineering - to decide what information each agent sees. The qualify of system depends on this.
 
+Workflows direct LLM
+Agent directs its own Actions/Tasks to achive a goal with a environmental feedback
+
+Popular Frameworks :(MSA)
+    JADE
+    Autogen
+    Langgraph
+    Langchain
+    Google ADK
+    Llamaindex
+    CrewAi
+
+
+Langgraph :
+    Built in persistance
+    HMI
+    Debugging & observability 
+    Streaming-first Architecture
+    Flexible Agent Patterns
+
+    Key Concepts :(DAG)
+        State
+        Nodes
+        Edges
+
+
+
+
 
 
 
