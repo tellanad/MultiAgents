@@ -3,7 +3,14 @@ from langchain_openai import ChatOpenAI
 from langchain_tavily import TavilySearch
 from deepagents import create_deep_agent
 from langgraph.prebuilt import create_react_agent
+import os 
+from dotenv import load_dotenv
 
+load_dotenv()
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
+SERP_API_KEY= os.getenv("SERP_API_KEY")
 
 # Initialize Tavily client backends
 tavily_advanced = TavilySearch(max_results=5, search_depth="advanced")
