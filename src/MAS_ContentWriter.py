@@ -10,6 +10,28 @@ tavily_advanced = TavilySearch(max_results=5, search_depth="advanced")
 tavily_basic = TavilySearch(max_results=3, search_depth="basic")
 
 
+@tool
+def research_tool(topic_or_hypothesis: str) -> str:
+    """Run an in-depth research sweep over high-authority sources, academic papers,
+    and long-form publications.
+
+    COST NOTICE: This is an expensive and heavy tool call. Only invoke this ONCE
+    or TWICE per session when deep context or structured evidence gathering is required.
+    Do NOT use for surface lookups or simple facts.
+    """
+    response = tavily_advanced.invoke({"query": topic_or_hypothesis})
+    return str(response)
+
+
+@tool
+def internet_search_tool(query: str) -> str:
+    """Run a fast, lightweight search across the public web.
+
+    Use this freely and repeatedly for quick fact checks, SEO trends, keyword
+    discovery, company updates, or specific single-fact lookups.
+    """
+    response = tavily_basic.invoke({"query": query})
+    return str(response)
 
 
 
